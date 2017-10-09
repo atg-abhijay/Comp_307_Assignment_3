@@ -2,19 +2,42 @@
 <html>
     <head>
         <style>
-            a{
-                color: rgb(117, 172, 141);
-            }
-            p.welcome_bar
+            /* p
             {
-                font-size: 12px; background-color: rgb(0, 74, 70);
-                padding-left: 130px; height: 30px; font-size: 20px;
-                color: white;
+                align-self: center;
+            } */
+
+            a.welcome_bar_links:link
+            {
+                color: rgb(117, 172, 141);
             }
 
-            .welcome_bar_links
+            a.welcome_bar_links:visited
             {
-                color: rgb(117, 172, 141);
+                color:brown;
+            }
+
+            a.menu_bar:link
+            {
+                color: black; font-weight: lighter;
+                text-decoration: none;
+            }
+
+            a.menu_bar:visited
+            {
+                color: brown;
+            }
+
+            .welcome_bar
+            {
+                font-size: 12px; background-color: rgb(0, 74, 70);
+                font-size: 20px; color: white;
+                height: 30px;
+            }
+
+            .zero_top_bottom_margin
+            {
+                margin-top: 0px; margin-bottom: 0px;
             }
 
             .right
@@ -23,7 +46,11 @@
                 margin-right: 100px;
             }
 
-            p.blog_bar
+            .left_padding{
+                padding-left: 130px
+            }
+
+            .blog_bar
             {
                 color: white; background-color: rgb(0, 140, 97);
                 height: 150px; font-size: 45px;
@@ -33,31 +60,103 @@
             .menu_bar
             {
                 background-color: rgb(110, 187, 142);
+                font-size:25px; height: 35px;
+            }
 
+            .article_heading
+            {
+                font-weight: bold; font-size: 23px;
+
+            }
+
+            .article_padding
+            {
+                padding-right: 440px;
+            }
+
+            .content_list
+            {
+                background-color: rgb(214, 223, 212);
+                width: 300px; padding-left: 30px;
+                font-size: 16px;
+                /* position: fixed; top: 223px;
+                right: 100px; width: 300px; */
+                /* text-align: right; */
+            }
+
+            .content_heading
+            {
+                font-size: 20px; font-weight: bold;
             }
 
         </style>
     </head>
 
     <body>
-        <p class="welcome_bar">
+        <p class="welcome_bar zero_top_bottom_margin left_padding">
             Welcome, Guest
-            <span class="welcome_bar_links">
-                <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.ca%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">Login</a>
-                <a href="https://accounts.google.com/SignUp?continue=https%3A%2F%2Fwww.google.ca%2F&hl=en" target="_blank">Sign Up</a>
-            </span>
-            <span class="right">Stay Updated
-                    <a href="https://www.google.ca/" target="_blank"><span class="welcome_bar_links">Subscribe via RSS Feeds</span></a>
-                    <a href="https://www.google.ca/" target="_blank"><span class="welcome_bar_links">Email Updates</span></a>
+            <a class="welcome_bar_links" :visited :link
+            href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.ca%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">Login</a>
+
+            <a class="welcome_bar_links" :visited :link
+            href="https://accounts.google.com/SignUp?continue=https%3A%2F%2Fwww.google.ca%2F&hl=en" target="_blank">Sign Up</a>
+
+            <span class="right">
+                Stay Updated
+                <a class="welcome_bar_links" :visited :link href="https://translate.google.ca/" target="_blank">Subscribe via RSS Feeds</a>
+                <a class="welcome_bar_links" :visited :link href="https://translate.google.ca/" target="_blank">Email Updates</a>
             </span>
         </p>
 
-        <p class="blog_bar">
+        <p class="blog_bar zero_top_bottom_margin">
             My Blog     <span style="font-size: 27px">Description of My Blog</span>
         </p>
 
-        <p>
-
+        <p class="menu_bar zero_top_bottom_margin left_padding">
+            <a class="menu_bar" :link :visited href="https://translate.google.ca/" target="_blank">HOME</a> &emsp;&emsp;
+            <a class="menu_bar" :link :visited href="https://translate.google.ca/" target="_blank">ABOUT</a>&emsp;&emsp;
+            <a class="menu_bar" :link :visited href="https://translate.google.ca/" target="_blank">BLOG</a>&emsp;&emsp;
+            <a class="menu_bar" :link :visited href="https://translate.google.ca/" target="_blank">HOME</a>
         </p>
+
+        <p class="content_list zero_top_bottom_margin right">
+            <span class="content_heading"><br/><br/>Categories</span><br/><br/>
+                General<br/>
+                Ghost Sightings<br/>
+                UFO Crashes<br/>
+                Government Coverups<br/>
+                International Conspiracies
+
+            <span class="content_heading"><br/><br/>Recent Posts</span><br/><br/>
+                Ghost Sightings in Mansion<br/>
+                UFO picked up by satellites<br/>
+                Mutants among us?<br/>
+                Bigfoot: Fact or fiction?
+
+            <span class="content_heading"><br/><br/>Archives</span><br/><br/>
+                June 2008<br/>
+                May 2008<br/>
+                April 2008<br/>
+                March 2008<br/><br/><br/>
+        </p>
+
+        <br/>
+
+        <p class="left_padding article_padding">
+            <span class="article_heading">Don't Cancel Chuck!</span><br/>
+            <span style="font-size: 15px">
+                on July 01 in <a href="https://translate.google.ca/" target="_blank">General</a>
+                tagged <a href="https://translate.google.ca/" target="_blank">petitions</a> by
+                <a href="https://translate.google.ca/" target="_blank">admin</a>
+            </span><br/><br/>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id urna vitae odio tempor tempus. Duis nec odio sit amet sapien faucibus dapibus. Duis nec lorem id risus sodales ornare eget vitae quam. Nulla vehicula sagittis augue, nec tincidunt velit scelerisque nec. Quisque ac dolor ex. Sed ut felis ac est egestas volutpat. Pellentesque ut arcu a est tincidunt luctus. Suspendisse aliquet tempor neque, ut scelerisque nibh sollicitudin nec. In rutrum scelerisque velit non vestibulum. Quisque sit amet nisi semper, efficitur nibh sit amet, luctus lacus. Proin vel mi mollis, porttitor felis in, pulvinar sem. Cras sit amet pretium purus. In ultrices dolor sodales gravida tincidunt. Donec ligula elit, efficitur quis rhoncus ac, condimentum et risus.<br/><br/>
+        </p>
+
+        <p class="left_padding article_padding" style="align-self: center;">
+            In aliquam molestie orci, quis vestibulum augue interdum eget. Fusce ultrices leo ipsum, ac eleifend diam tempus a. Pellentesque velit felis, maximus vel lacinia nec, viverra porttitor eros. Nullam eleifend, neque sed porta tincidunt, nisi odio pharetra eros, in malesuada sem dui vitae sem. Cras eget elementum felis. Sed quis ultricies magna. Praesent nec fringilla sem.<br/><br/>
+        </p>
+
+
     </body>
 </html>
